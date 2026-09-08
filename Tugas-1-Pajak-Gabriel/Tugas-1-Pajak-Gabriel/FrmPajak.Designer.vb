@@ -26,6 +26,7 @@ Partial Class frmPajak
         Label2 = New Label()
         txtPendapatan = New TextBox()
         btnHitung = New Button()
+        btnKeluar = New Button()
         SuspendLayout()
         ' 
         ' Label1
@@ -62,16 +63,26 @@ Partial Class frmPajak
         btnHitung.Text = "Hitung"
         btnHitung.UseVisualStyleBackColor = True
         ' 
-        ' frmPajak
+        ' btnKeluar
+        ' 
+        btnKeluar.Location = New Point(300, 351)
+        btnKeluar.Name = "btnKeluar"
+        btnKeluar.Size = New Size(112, 34)
+        btnKeluar.TabIndex = 4
+        btnKeluar.Text = "Keluar"
+        btnKeluar.UseVisualStyleBackColor = True
+        ' 
+        ' FrmPajak
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(btnKeluar)
         Controls.Add(btnHitung)
         Controls.Add(txtPendapatan)
         Controls.Add(Label2)
         Controls.Add(Label1)
-        Name = "frmPajak"
+        Name = "FrmPajak"
         Text = "Pajak"
         ResumeLayout(False)
         PerformLayout()
@@ -81,4 +92,5 @@ Partial Class frmPajak
     Friend WithEvents Label2 As Label
     Friend WithEvents txtPendapatan As TextBox
     Friend WithEvents btnHitung As Button
+    Friend WithEvents btnKeluar As Button
 End Class

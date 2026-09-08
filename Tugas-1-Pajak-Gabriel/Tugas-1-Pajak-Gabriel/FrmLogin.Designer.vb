@@ -22,25 +22,25 @@ Partial Class frmLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        picProfile = New PictureBox()
+        picImage = New PictureBox()
         Label1 = New Label()
         lblNama = New Label()
         lblNIM = New Label()
-        cboRole = New ComboBox()
+        cmbRole = New ComboBox()
         btnLogin = New Button()
         txtNama = New TextBox()
         txtNIM = New TextBox()
-        CType(picProfile, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picImage, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' picProfile
+        ' picImage
         ' 
-        picProfile.Location = New Point(351, 36)
-        picProfile.Name = "picProfile"
-        picProfile.Size = New Size(100, 100)
-        picProfile.SizeMode = PictureBoxSizeMode.Zoom
-        picProfile.TabIndex = 0
-        picProfile.TabStop = False
+        picImage.Location = New Point(351, 36)
+        picImage.Name = "picImage"
+        picImage.Size = New Size(100, 100)
+        picImage.SizeMode = PictureBoxSizeMode.Zoom
+        picImage.TabIndex = 0
+        picImage.TabStop = False
         ' 
         ' Label1
         ' 
@@ -69,15 +69,15 @@ Partial Class frmLogin
         lblNIM.TabIndex = 3
         lblNIM.Text = "NIM    :"
         ' 
-        ' cboRole
+        ' cmbRole
         ' 
-        cboRole.DropDownStyle = ComboBoxStyle.DropDownList
-        cboRole.FormattingEnabled = True
-        cboRole.Items.AddRange(New Object() {"Staff", "Manager"})
-        cboRole.Location = New Point(300, 172)
-        cboRole.Name = "cboRole"
-        cboRole.Size = New Size(182, 33)
-        cboRole.TabIndex = 4
+        cmbRole.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbRole.FormattingEnabled = True
+        cmbRole.Items.AddRange(New Object() {"Staff", "Manager"})
+        cmbRole.Location = New Point(300, 172)
+        cmbRole.Name = "cmbRole"
+        cmbRole.Size = New Size(182, 33)
+        cmbRole.TabIndex = 4
         ' 
         ' btnLogin
         ' 
@@ -102,7 +102,7 @@ Partial Class frmLogin
         txtNIM.Size = New Size(182, 31)
         txtNIM.TabIndex = 7
         ' 
-        ' frmLogin
+        ' FrmLogin
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
@@ -110,23 +110,23 @@ Partial Class frmLogin
         Controls.Add(txtNIM)
         Controls.Add(txtNama)
         Controls.Add(btnLogin)
-        Controls.Add(cboRole)
+        Controls.Add(cmbRole)
         Controls.Add(lblNIM)
         Controls.Add(lblNama)
         Controls.Add(Label1)
-        Controls.Add(picProfile)
-        Name = "frmLogin"
+        Controls.Add(picImage)
+        Name = "FrmLogin"
         Text = "Login"
-        CType(picProfile, ComponentModel.ISupportInitialize).EndInit()
+        CType(picImage, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents picProfile As PictureBox
+    Friend WithEvents picImage As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents lblNama As Label
     Friend WithEvents lblNIM As Label
-    Friend WithEvents cboRole As ComboBox
+    Friend WithEvents cmbRole As ComboBox
     Friend WithEvents btnLogin As Button
     Friend WithEvents txtNama As TextBox
     Friend WithEvents txtNIM As TextBox
