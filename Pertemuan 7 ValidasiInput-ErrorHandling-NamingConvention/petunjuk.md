@@ -1,4 +1,4 @@
-# Validasi Input, Error Handling & Naming Convention
+# Praktik Pertemuan 7: Validasi Input, Error Handling & Naming Convention
 
 Hasil akhir praktik ini adalah satu proyek bernama **FormPendaftaran** dengan tiga form:
 
@@ -15,7 +15,11 @@ Hasil akhir praktik ini adalah satu proyek bernama **FormPendaftaran** dengan ti
 
    Pilih **Windows Forms App**, bukan **Windows Forms App (.NET Framework)** yang letaknya tepat di bawahnya.
 
+![Jendela Create a new project dengan template Windows Forms App (Visual Basic) terpilih](gambar/praktik/01.png)
+
 3. Aktifkan Option Strict: klik kanan proyek di Solution Explorer, pilih **Properties**, buka bagian **Compile**, lalu atur **Option strict** menjadi **On**.
+
+![Project Properties bagian Compile > Options dengan Option strict = On](gambar/praktik/02.png)
 
 4. Di Solution Explorer, klik kanan `Form1.vb`, pilih **Rename**, ganti menjadi `FrmUtama.vb`. Jika Visual Studio bertanya apakah semua referensi ikut diganti, pilih **Yes**. Setelah itu, pastikan **Startup form** di Project Properties bagian **Application** sudah berisi `FrmUtama`.
 5. Klik form di Designer, lalu atur propertinya:
@@ -66,6 +70,8 @@ Ganti `(Name)` setiap kontrol **sebelum** membuat event, supaya nama Sub event-n
 | Button | btnTryCatch | Try...Catch | |
 | Button | btnCatchBertingkat | Catch Bertingkat | |
 | Label | lblHasil | Hasil akan tampil di sini. | AutoSize: False, BorderStyle: FixedSingle, Padding: 8 |
+
+![FrmUjiKonversi di Designer dengan semua kontrol tersusun](gambar/praktik/03.png)
 
 ### 1.2 Menulis kode
 
@@ -156,6 +162,10 @@ Tekan **F5**, klik tombol Uji Konversi, lalu coba langkah berikut:
 | 4 | Ketik `0`, klik **Catch Bertingkat** | lblHasil berisi "Pembagian dengan nol tidak diperbolehkan." |
 | 5 | Ketik `abc`, klik **CInt (tanpa Try)** | Visual Studio berhenti di baris `CInt` dan menampilkan jendela Exception User-Unhandled. Ini memang disengaja. Tekan Stop untuk keluar |
 
+![FrmUjiKonversi berjalan dengan MessageBox "Input Tidak Valid" setelah input abc](gambar/praktik/04.png)
+
+![Visual Studio berhenti di baris CInt(txtInput.Text) dengan jendela Exception User-Unhandled](gambar/praktik/05.png)
+
 ## Praktik 2: Form Pendaftaran Mahasiswa
 
 ### 2.1 Membuat Module validasi
@@ -241,6 +251,8 @@ Teknik Komputer
 ```
 
 4. Tambahkan **ErrorProvider** dari Toolbox (grup Components). Komponen ini muncul di component tray di bawah form. Ganti `(Name)`-nya menjadi `errInput`.
+
+![FrmPendaftaran di Designer, lengkap dengan errInput di component tray](gambar/praktik/06.png)
 
 ### 2.3 Menulis kode
 
@@ -330,6 +342,8 @@ Public Class FrmPendaftaran
 
 Event ini tidak dibuat dengan double-click. Pilih `txtNim` di Designer, buka jendela Properties, klik ikon petir (**Events**), lalu double-click baris **Validating**.
 
+![Jendela Properties tab Events untuk txtNim, baris Validating berisi txtNim_Validating](gambar/praktik/07.png)
+
 ```vb
     ' Validasi per kontrol: berjalan saat fokus meninggalkan txtNim
     Private Sub txtNim_Validating(sender As Object, e As CancelEventArgs) Handles txtNim.Validating
@@ -402,6 +416,8 @@ End Class
     End Sub
 ```
 
+![FrmUtama di Designer dengan lblJudul, btnUjiKonversi, dan btnPendaftaran](gambar/praktik/08.png)
+
 ### 2.5 Menjalankan dan menguji
 
 Tekan **F5**, buka Form Pendaftaran Mahasiswa, lalu coba langkah berikut:
@@ -416,3 +432,9 @@ Tekan **F5**, buka Form Pendaftaran Mahasiswa, lalu coba langkah berikut:
 | 6 | Isi beberapa kolom dengan data salah, lalu klik **Bersihkan** | Isian dan semua ikon merah hilang |
 | 7 | Klik **Ekspor ke CSV** | lblStatus menampilkan lokasi file `data-mahasiswa.csv` di folder Documents |
 | 8 | Buka `data-mahasiswa.csv` di Excel, lalu klik **Ekspor ke CSV** lagi tanpa menutup Excel | Muncul MessageBox "Ekspor Gagal" dan program tetap berjalan |
+
+![FrmPendaftaran berjalan dengan ikon merah ErrorProvider dan tooltip "Nama wajib diisi."](gambar/praktik/09.png)
+
+![FrmPendaftaran berjalan dengan tiga data di daftar dan lblStatus "Data Budi Santoso tersimpan."](gambar/praktik/10.png)
+
+![MessageBox "Ekspor Gagal" saat data-mahasiswa.csv sedang dibuka di Excel](gambar/praktik/11.png)
