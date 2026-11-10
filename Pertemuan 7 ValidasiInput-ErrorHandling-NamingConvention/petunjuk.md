@@ -1,4 +1,4 @@
-# Praktik Pertemuan 7: Validasi Input, Error Handling & Naming Convention
+# Validasi Input, Error Handling & Naming Convention
 
 Hasil akhir praktik ini adalah satu proyek bernama **FormPendaftaran** dengan tiga form:
 
